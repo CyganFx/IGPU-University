@@ -1,0 +1,108 @@
+.plus {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    background: rgb(243, 179, 4);
+    cursor: pointer;
+    z-index: 3;
+    transition: 1s;
+}
+
+.plus.active {
+    opacity: 1;
+}
+
+.plus::before {
+    content: 'x';
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    left: 11px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+    background: rgba(0, 0, 0, .95);
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 1;
+}
+
+.overlay.active {
+    visibility: visible;
+    transform: scale(100, 100);
+}
+
+
+/* Application Form */
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+    z-index: 2;
+}
+
+.wrapper.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.registration-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, .8);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .13);
+    font-size: 40px;
+    font-family: serif;
+}
+
+.registration-form .row {
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    background: transparent;
+}
+
+.input {
+    margin: 10px 0;
+    background: transparent;
+    border-radius: 5px;
+    color: whitesmoke;
+    outline: none;
+    width: 90%;
+}
+
+.btn {
+    margin: .5em;
+}
+
+#submit:hover {
+    background-color: tomato;
+    transition: .5s;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.67,maximum-scale=0.67">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="Applications_css.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="images/title_logo.png">
+
+  <title>Bachelor's program</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 header__inner">
+          <a href="Final.php" style="text-decoration: none;">
+            <div class="header__logo">IGP<span style="color: #fce38a;">U</span></div>
+          </a>
+          <nav class="nav">
+            <a class="nav__link active" href="#about_page">About</a>
+            <a class="nav__link" href="#our_staff_image">Staff</a>
+            <a class="nav__link" href="#educational_programs">Educational Programs</a>
+            <a class="nav__link" href="#news">News</a>
+            <a class="nav__link" href="#contacts">Contacts</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Picture -->
+  <div class="picture_container">
+    <div class="picture"></div>
+    <div class="text lax" data-lax-translate-y="0 0, 50 -25">
+      <h1>Admission</h1>
+      <p>IGP University / Application / Bachelor's Program</p>
+    </div>
+  </div>
+
+  <!-- Bachelor Description -->
+
+  <h1 class="h1">Bachelor's Program</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-1 col-sm-10 offset-sm-1">
+        <p class="p">A Bachelor's program of International Genius People University trains professionals for working in top companies. Our university has partnership with big five companies. Every weekend lectures from representatives of big companies are held in
+          our doors.
+        </p>
+        <!-- Toggle Button -->
+        <div class="text-center">
+          <div class="btn btn-info btn-lg apply_button">Apply</div>
+        </div>
+      </div>
+      <!-- Video -->
+      <div class="col-lg-4">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/6Fxh1x-jVj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay Animation -->
+
+  <div class="plus" id="plus"></div>
+  <div class="overlay"></div>
+
+  <!-- Application Form -->
+
+  <div class="wrapper">
+    <div class="registration-form">
+      <form class="container input-fields">
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Choose House</label>
+          </div>
+          <div class="col-lg-6">
+            <select>
+              <option value="Engineer">Engineer</option>
+              <option value="Programmer">Programmer</option>
+              <option value="Business">Business</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Superhuman (Kazakh)</label>
+          </div>
+          <div class="col-lg-6 checkboxes">
+            <label>Yes</label> <input type="checkbox" class="checkbox">
+            <label>No</label> <input type="checkbox" class="checkbox">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Identification Number</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="text" class="input" placeholder="ID">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Name</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="text" class="input" required placeholder="Type your first name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Surname</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="text" class="input" required placeholder="Type your last name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Date of Birth</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="date" required class="input">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>E-mail</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="mail" required class="input" placeholder="Smile@gmail.com">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Password</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="password" class="input" required placeholder="Your e-mail password">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Confirm Passoword</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="password" class="input" required placeholder="Your e-mail password">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>IELTS</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="file" required class="file">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>SAT Reasoning</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="file" required class="file">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>SAT Subject</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="file" class="file">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Foundation program certificate (optional)</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="file" class="file">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <label>Phone Number</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="number" required class="input" placeholder="87772292347">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 offset-lg-8">
+            <input type="submit" class="input" id="submit">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Requirements -->
+
+  <h1 class="h1" style="padding-bottom: 15px;">Introductory Requirements</h1>
+  <h3 class="h3" style="color: red;">*Republican/International olympiad champions and foundation program graduates of our university with GPA more than 3.5 are accepted automatically</h3>
+  <h3 class="h3">Minimum requirements for graduates and students of high schools, college, the Kazakhstan Foundation Program, as well as graduates of the A-level program</h3>
+  <div class="container requirements">
+    <div class="row">
+      <div class="col col-lg-3 col-sm-6">House</div>
+      <div class="col col-lg-3 col-sm-6">SAT Reasoning</div>
+      <div class="col col-lg-3 col-sm-6">SAT Subject</div>
+      <div class="col col-lg-3 col-sm-6">IELTS/TOEFL</div>
+    </div>
+    <div class="row">
+      <div class="col col-lg-3 col-sm-6">Engineers House</div>
+      <div class="col col-lg-3 col-sm-6"></div>
+      <div class="col col-lg-3 col-sm-6">SAT Subject Test - 700 in Mathematics and 700 in Physics</div>
+      <div class="col col-lg-3 col-sm-6">IELTS - 6.5 <br /> OR <br /> TOEFL - 79</div>
+    </div>
+    <div class="row">
+      <div class="col col-lg-3 col-sm-6">Programmers House</div>
+      <div class="col col-lg-3 col-sm-6">SAT Reasoning Test - 1400. Essay is required</div>
+      <div class="col col-lg-3 col-sm-6">SAT Subject Test - 750 in Mathematics and 650 in Physics</div>
+      <div class="col col-lg-3 col-sm-6">IELTS - 7.0 <br /> OR <br /> TOEFL - 94</div>
+    </div>
+    <div class="row">
+      <div class="col col-lg-3 col-sm-6">Business House</div>
+      <div class="col col-lg-3 col-sm-6"></div>
+      <div class="col col-lg-3 col-sm-6">None</div>
+      <div class="col col-lg-3 col-sm-6">IELTS - 8.0 <br /> OR <br /> TOEFL - 110</div>
+    </div>
+  </div>
+
+  <!-- Scroll Button -->
+
+  <button onclick="scrollToTop()" id="scroll_button" title="Scroll to top">
+        <i class="material-icons md-12" id="scroll_arrow">arrow_upward</i>
+    </button>
+
+  <!-- Script -->
+
+  <script src="Final.js"></script>
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
+  <!-- JQuery -->
+
+  <script>
+    // Apply Animation
+
+    $(document).ready(function() {
+      $('.apply_button').click(function() {
+        $('.plus').toggleClass('active');
+        $('.overlay').toggleClass('active');
+        $('.wrapper').toggleClass('active');
+      });
+    });
+
+    // Close Animation
+
+    $(document).ready(function() {
+      $('.plus').click(function() {
+        $('.plus').toggleClass('active');
+        $('.overlay').toggleClass('active');
+        $('.wrapper').toggleClass('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

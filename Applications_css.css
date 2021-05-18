@@ -1,0 +1,392 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    color: black;
+}
+
+.h1,
+.h2,
+.h3 {
+    margin-left: 70px;
+    color: rgb(41, 41, 41);
+}
+
+.h1 {
+    font-size: 50px;
+    padding: 20px 0;
+}
+
+.h3 {
+    font-size: 30px;
+    margin-right: 250px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .h3 {
+        margin-right: 30px;
+    }
+}
+
+.p {
+    margin-top: 50px;
+}
+
+
+/* Red Header */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    background-color: #a51c30;
+}
+
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: coral;
+    margin-left: 50px;
+    font-family: serif;
+}
+
+
+/* Nav */
+
+.nav {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+    color: #fff;
+    transition: color .1s linear;
+    font-size: 1.2rem;
+}
+
+.nav a {
+    text-decoration: none;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fce38a;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .3s linear;
+}
+
+.nav__link:hover {
+    color: #fce38a;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.nav__link.active {
+    color: #fce38a;
+}
+
+
+/* Picture */
+
+.picture_container {
+    position: relative;
+}
+
+.picture {
+    background: url(images/application_image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 35vh;
+    color: whitesmoke;
+    filter: brightness(.8);
+}
+
+.text {
+    position: absolute;
+    top: 8%;
+    left: 1%;
+    color: whitesmoke;
+}
+
+.text h1 {
+    font-size: 50px;
+    margin-left: 200px;
+    padding-top: 120px;
+    text-shadow: black 1px 1px 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text p {
+    padding-left: 200px;
+    text-shadow: black 0 0 5px;
+    font-family: 'Slabo 27px', serif;
+    font-style: italic;
+}
+
+
+/* Buttons */
+
+.apply_button {
+    width: 30%;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+.plus {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    background: rgb(243, 179, 4);
+    cursor: pointer;
+    z-index: 3;
+    transition: 1s;
+}
+
+.plus.active {
+    opacity: 1;
+}
+
+.plus::before {
+    content: 'x';
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    left: 11px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    visibility: hidden;
+    background: rgba(0, 0, 0, .95);
+    border-radius: 50%;
+    transition: 1s;
+    z-index: 1;
+}
+
+.overlay.active {
+    visibility: visible;
+    transform: scale(100, 100);
+}
+
+
+/* Application Form */
+
+.wrapper {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+    z-index: 2;
+}
+
+.wrapper.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        top: 130%;
+    }
+}
+
+.registration-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, .8);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .13);
+    font-size: 40px;
+    font-family: serif;
+}
+
+.registration-form .row {
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    background: transparent;
+}
+
+.input,
+.checkbox,
+select {
+    margin: 10px 0;
+    background: transparent;
+    border-radius: 5px;
+    color: whitesmoke;
+    outline: none;
+    width: 90%;
+}
+
+.checkboxes {
+    display: flex;
+    font-size: 35px;
+}
+
+.checkbox {
+    display: flex;
+    align-self: center;
+    height: 30px;
+    width: 10%;
+    margin: 0 20px;
+}
+
+.file {
+    max-width: 100%;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+#submit:hover {
+    background-color: tomato;
+    transition: .5s;
+}
+
+
+/* Scroll Button */
+
+#scroll_button {
+    display: none;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 70px;
+    background: #e62739;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    z-index: 99999;
+}
+
+#scroll_button:active {
+    background: #cc2333;
+}
+
+#scroll_arrow {
+    position: absolute;
+    font-size: 45px;
+    bottom: 13px;
+    left: 13px;
+}
+
+
+/* Requirements Table */
+
+.requirements {
+    border: 5px inset;
+    border-collapse: collapse;
+    font-size: 25px;
+    border-spacing: none;
+}
+
+.requirements .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.requirements .col:nth-child(1),
+.requirements .col:nth-child(3),
+.requirements .col:nth-child(4) {
+    border-bottom: 3px outset;
+}
+
+.requirements .row:nth-child(1) {
+    background-color: #a51c30;
+    font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.requirements .col:nth-child(2) {
+    border-right: 3px outset;
+    border-left: 3px inset;
+    border-bottom: none;
+}
+
+.requirements .row:nth-child(4) .col:nth-child(2) {
+    border-bottom: 3px grey inset;
+}
+
+.requirements .col:nth-child(4) {
+    border-left: 3px inset;
+}
+
+@media screen and (max-width: 650px) {
+    .header {
+        width: 100vw;
+    }
+    .header__inner {
+        height: 100px;
+    }
+    .nav {
+        margin-left: 20px;
+    }
+    .nav__link {
+        font-size: 20px;
+        margin: 0 3px;
+    }
+    .text h1 {
+        margin-left: 20px;
+    }
+    .text p {
+        margin-left: -180px;
+    }
+}

@@ -1,0 +1,228 @@
+:root {
+    scroll-behavior: smooth;
+    --hover-color: #fce38a;
+    --hover-button-color: #cc8533;
+    --header-color: #a51c30;
+    --title-color: #333;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI";
+    color: #3c3939;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Red Header */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__logo a {
+    font-size: 40px;
+    font-weight: 700;
+    color: coral;
+    margin-left: 50px;
+    font-family: serif;
+    text-decoration: none;
+}
+
+
+/* Nav */
+
+.nav {
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-color);
+    position: relative;
+    height: 3em;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: .5em;
+}
+
+.nav ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.nav ul li:last-of-type {
+    padding-right: 30px;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--hover-color);
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .3s linear;
+}
+
+.nav__link:hover,
+.nav__link.active {
+    color: var(--hover-color);
+    transition: color .3s linear;
+}
+
+.nav__link:hover:after,
+.nav__link.active:after {
+    opacity: 1;
+}
+
+.scroll-navbar-button {
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    padding-right: 50px;
+    cursor: pointer;
+    color: var(--hover-color);
+}
+
+.scroll-navbar-button:hover {
+    color: var(--hover-button-color);
+    transition: .3s linear;
+}
+
+#scroll-navbar-button {
+    display: none;
+}
+
+.profile-card {
+    width: 96%;
+    margin: 3.7em auto;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.avatar {
+    background: url(images/profile-image.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 8em 0;
+    filter: brightness(.9);
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+}
+
+.title {
+    padding-left: .2em;
+}
+
+.main-container {
+    padding: .5em;
+    font-size: 1.2em;
+}
+
+.info {
+    margin-right: .5em;
+    color: crimson;
+}
+
+.footer {
+    display: flex;
+    padding-bottom: .1em;
+}
+
+.logout {
+    margin-left: .3em;
+}
+
+.edit {
+    margin: 0 1em;
+}
+
+.fa {
+    width: 1em;
+}
+
+
+/* Iphone X */
+
+@media (max-width: 650px) {
+    .header__logo a {
+        font-size: 40px;
+    }
+    .nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 3.1rem;
+        left: 0;
+        text-align: center;
+        display: block;
+        background: var(--header-color);
+    }
+    .scroll-bar {
+        margin-left: 110%;
+        transition: 1s ease-in-out;
+    }
+    .scroll-bar-active {
+        margin-left: 0;
+    }
+    .nav ul li {
+        font-size: 1.8em;
+        font-weight: bold;
+        padding: 25px 0;
+        box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.6);
+    }
+    .nav ul li:last-of-type,
+    .nav ul li:first-of-type {
+        box-shadow: none;
+    }
+    #scroll-navbar-button {
+        padding-right: 20px;
+        display: block;
+        font-size: 2em;
+    }
+    .fa-bars {
+        cursor: pointer;
+    }
+    .header {
+        width: 100vw;
+        padding-bottom: 50px;
+    }
+    .avatar {
+        background: url(images/profile-image.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 8em 0;
+        filter: brightness(.9);
+        margin: 0;
+    }
+}
